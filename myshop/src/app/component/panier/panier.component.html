@@ -1,0 +1,18 @@
+<div class="my-app">
+<h1 *ngIf="taille_panier == 0">Votre panier est vide</h1>
+
+    <table *ngIf="taille_panier > 0">
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Prix</th>   
+        </tr>
+
+        <tr *ngFor="let produit of productList">
+            <td>{{produit.name}}</td>
+            <td><img mat-card-image src="../../../assets/{{produit.picture}}" alt="Photo du telephone"></td>
+            <td>{{produit.specifications.price}}</td>
+        </tr>
+    </table>
+
+</div>

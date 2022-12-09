@@ -1,0 +1,6 @@
+<div class="my-app">
+  <h1 *ngIf="!show" >Bonjour voici ma boutique</h1>
+  <h1 *ngIf="show">Voici un super article</h1>
+  <app-card (titre)="title($event)"></app-card>
+  <span [ngClass]="{'verite': show===true, 'secret': show===false}">Si tu es un pigeon, achete donc</span>
+</div>
